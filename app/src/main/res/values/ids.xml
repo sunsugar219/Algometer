@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item type="id" name="lightOne"/>
+	<item type="id" name="lightTwo"/>
+	<item type="id" name="lightThree"/>
+	<item type="id" name="lightFour"/>
+	<item type="id" name="lightFive"/>
+	<item type="id" name="lightSix"/>
+	<item type="id" name="lightSeven"/>
+	<item type="id" name="lightEight"/>
+	<item type="id" name="lightNine"/>
+	<item type="id" name="lightTen"/>
+	<item type="id" name="lightEleven"/>
+	<item type="id" name="lightTwelve"/>
+	<item type="id" name="lightThirteen"/>
+	<item type="id" name="lightFourteen"/>
+	<item type="id" name="lightFifteen"/>
+	<item type="id" name="lightSixteen"/>
+</resources>
