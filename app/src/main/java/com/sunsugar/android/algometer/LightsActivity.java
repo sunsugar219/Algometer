@@ -74,14 +74,6 @@ public class LightsActivity extends AppCompatActivity {
     @BindView(R.id.light_sixteen)
     public ImageView lightSixteen;
 
-    //binding buttons
-    //@BindView(R.id.final_enter)
-    //public Button finalEntry;
-    //@BindView(R.id.line_entry_button)
-    //public Button newLine;
-    //@BindView(R.id.play_button)
-    //public Button play;
-
     //Light objects
     public Light light1;
     public Light light2;
@@ -99,24 +91,6 @@ public class LightsActivity extends AppCompatActivity {
     public Light light14;
     public Light light15;
     public Light light16;
-
-/*
-    public boolean oneCheck=false;
-    public boolean twoCheck=false;
-    public boolean threeCheck;
-    public boolean fourCheck;
-    public boolean fiveCheck;
-    public boolean sixCheck;
-    public boolean sevenCheck;
-    public boolean eightCheck;
-    public boolean nineCheck;
-    public boolean tenCheck;
-    public boolean elevenCheck;
-    public boolean twelveCheck;
-    public boolean thirteenCheck;
-    public boolean fourteenCheck;
-    public boolean fifteenCheck;
-    public boolean sixteenCheck;*/
 
     //data from MainActivitypublic boolean oneclicked;
 
