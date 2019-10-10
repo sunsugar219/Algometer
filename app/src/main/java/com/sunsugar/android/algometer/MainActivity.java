@@ -18,6 +18,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -97,20 +99,36 @@ public class MainActivity extends AppCompatActivity {
 
         //reading text from patterns
         StringBuilder text = new StringBuilder();
+        String line;
 
-        try{
-            BufferedReader reader = new BufferedReader(new FileReader(patterns));
-            String line;
+        if(patterns.exists()){
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader(patterns));
 
-            while ((line = reader.readLine()) != null){
-                text.append(line);
-                text.append('\n');
+                while ((line = reader.readLine()) != null) {
+                    text.append(line);
+                    text.append('\n');
+                }
+                reader.close();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            reader.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            InputStream inputStream = getResources().openRawResource(R.raw.minta);
+            InputStreamReader inputReader = new InputStreamReader(inputStream);
+            BufferedReader reader = new BufferedReader(inputReader);
+            try {
+                while ((line = reader.readLine()) != null) {
+                    Log.i("in else clause", "else made it till here");
+                    text.append(line);
+                    text.append('\n');
+                    Log.i("read text", text.toString());
+
+                }
+                reader.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         //making a String[] of the patterns/exercises
@@ -157,21 +175,38 @@ public class MainActivity extends AppCompatActivity {
 
         //reading text from patterns
         StringBuilder text = new StringBuilder();
+        String line;
 
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(patterns));
-            String line;
+        if(patterns.exists()){
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader(patterns));
 
-            while ((line = reader.readLine()) != null) {
-                text.append(line);
-                text.append('\n');
+                while ((line = reader.readLine()) != null) {
+                    text.append(line);
+                    text.append('\n');
+                }
+                reader.close();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            reader.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            InputStream inputStream = getResources().openRawResource(R.raw.minta);
+            InputStreamReader inputReader = new InputStreamReader(inputStream);
+            BufferedReader reader = new BufferedReader(inputReader);
+            try {
+                while ((line = reader.readLine()) != null) {
+                    Log.i("in else clause", "else made it till here");
+                    text.append(line);
+                    text.append('\n');
+                    Log.i("read text", text.toString());
+
+                }
+                reader.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
+
 
         //making a String[] of the patterns/exercises
         Log.i("read text", text.toString());
