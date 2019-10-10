@@ -23,6 +23,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -91,68 +93,18 @@ public class MainActivity extends AppCompatActivity {
 
     //reading minta.txt and giving back the exercise numbers for the spinner
     public ArrayList<String> readPatterns(){
-        //filepath on sdcard
-        File path = Environment.getExternalStorageDirectory();
 
-        //getting the text file minta.txt
-        File patterns = new File(path, "minta.txt");
+        ArrayList<String[]> exerciseList = makeExercises();
 
-        //reading text from patterns
-        StringBuilder text = new StringBuilder();
-        String line;
-
-        if(patterns.exists()){
-            try {
-                BufferedReader reader = new BufferedReader(new FileReader(patterns));
-
-                while ((line = reader.readLine()) != null) {
-                    text.append(line);
-                    text.append('\n');
-                }
-                reader.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            InputStream inputStream = getResources().openRawResource(R.raw.minta);
-            InputStreamReader inputReader = new InputStreamReader(inputStream);
-            BufferedReader reader = new BufferedReader(inputReader);
-            try {
-                while ((line = reader.readLine()) != null) {
-                    Log.i("in else clause", "else made it till here");
-                    text.append(line);
-                    text.append('\n');
-                    Log.i("read text", text.toString());
-
-                }
-                reader.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        //making a String[] of the patterns/exercises
-        Log.i("read text", text.toString());
-        String exStr = text.toString();
-        String[] exercises = exStr.split("Ex ");
-
-        //for debugging
-        // TextView testText = (TextView)findViewById(R.id.test_text);
-        //testText.setText(Arrays.toString(exercises));*/
 
         //arraylist for exercise names
         ArrayList<String> exNames = new ArrayList<>();
 
-        for (int i = 1; i < exercises.length; i++) {
+        for (int i = 0; i < exerciseList.size(); i++) {
 
-            switch (exercises[i].charAt(0)){
-                case '-':
-                case '*':
-                    break;
-                default:
-                    exNames.add(Character.toString(exercises[i].charAt(0)));
-            }
+            exNames.add(exerciseList.get(i)[0]);
         }
+
         return exNames;
     }
 
