@@ -106,146 +106,30 @@ public class LightsActivity extends AppCompatActivity {
     Handler preHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
+            ImageView[] lightArray = {lightOne, lightTwo, lightThree, lightFour, lightFive, lightSix,
+            lightSeven, lightEight, lightNine, lightTen, lightEleven, lightTwelve, lightThirteen,
+            lightFourteen, lightFifteen, lightSixteen};
 
                 int j = 0;
+                int a = -1;
 
-                if (j < exercise.get(1).length()) {
-                    if (exercise.get(i).charAt(j) == '*') {
-                        lightOne.setImageResource(images[1]);
-                        Log.i("Char at 1:", Character.toString(exercise.get(i).charAt(j)));
-                    } else if (exercise.get(i).charAt(j) == '-') {
-                        lightOne.setImageResource(images[0]);
-                        Log.i("Char at 1:", Character.toString(exercise.get(i).charAt(j)));
+                for (int b = 0; b < exercise.get(1).length();b++) {
+                    if (j < exercise.get(1).length() && j > a) {
+                        if (exercise.get(i).charAt(j) == '*') {
+                            lightArray[b].setImageResource(images[1]);
+                            //lightOne.setImageResource(images[1]);
+                            Log.i("Char at 1:", Character.toString(exercise.get(i).charAt(j)));
+                        } else if (exercise.get(i).charAt(j) == '-') {
+                            lightArray[b].setImageResource(images[0]);
+                            //lightOne.setImageResource(images[0]);
+                            Log.i("Char at 1:", Character.toString(exercise.get(i).charAt(j)));
+                        }
+                        j++;
+                        a++;
                     }
-                    j++;
                 }
 
-                if (j < exercise.get(1).length() && j > 0) {
-                    if (exercise.get(i).charAt(j) == '*') {
-                        lightTwo.setImageResource(images[1]);
-                        Log.i("Char at 2:", Character.toString(exercise.get(i).charAt(j)));
-                    } else if (exercise.get(i).charAt(j) == '-') {
-                        lightTwo.setImageResource(images[0]);
-                        Log.i("Char at 2:", Character.toString(exercise.get(i).charAt(j)));
-                    }
-                    j++;
-                }
-
-                if (j < exercise.get(1).length() && j > 1) {
-                    if (exercise.get(i).charAt(j) == '*') {
-                        lightThree.setImageResource(images[1]);
-                    } else if (exercise.get(i).charAt(j) == '-') {
-                        lightThree.setImageResource(images[0]);
-                    }
-                    j++;
-                }
-
-            if (j < exercise.get(1).length() && j > 2) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightFour.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightFour.setImageResource(images[0]);
-                }
-                j++;
             }
-            if (j < exercise.get(1).length() && j > 3) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightFive.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightFive.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 4) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightSix.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightSix.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 5) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightSeven.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightSeven.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 6) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightEight.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightEight.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 7) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightNine.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightNine.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 8) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightTen.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightTen.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 9) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightEleven.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightEleven.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 10) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightTwelve.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightTwelve.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 11) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightThirteen.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightThirteen.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 12) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightFourteen.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightFourteen.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 13) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightFifteen.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightFifteen.setImageResource(images[0]);
-                }
-                j++;
-            }
-            if (j < exercise.get(1).length() && j > 14) {
-                if (exercise.get(i).charAt(j) == '*') {
-                    lightSixteen.setImageResource(images[1]);
-                } else if (exercise.get(i).charAt(j) == '-') {
-                    lightSixteen.setImageResource(images[0]);
-                }
-                j++;
-            }
-            }
-       // }
     };
 
     Handler postHandler = new Handler(){
@@ -253,54 +137,15 @@ public class LightsActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             final int[] images = {R.drawable.ic_radio_button_unchecked_black_24dp,
                     R.drawable.ic_radio_button_unchecked_red_24dp};
-            if(lightOne.getVisibility() == View.VISIBLE){
-                lightOne.setImageResource(images[0]);
+            ImageView[] lightArray = {lightOne, lightTwo, lightThree, lightFour, lightFive, lightSix,
+                    lightSeven, lightEight, lightNine, lightTen, lightEleven, lightTwelve, lightThirteen,
+                    lightFourteen, lightFifteen, lightSixteen};
+            for(int i = 0; i < lightArray.length; i++){
+                if(lightArray[i].getVisibility() == View.VISIBLE){
+                    lightArray[i].setImageResource(images[0]);
+                }
             }
-            if(lightTwo.getVisibility() == View.VISIBLE){
-                lightTwo.setImageResource(images[0]);
-            }
-            if(lightThree.getVisibility() == View.VISIBLE){
-                lightThree.setImageResource(images[0]);
-            }
-            if(lightFour.getVisibility() == View.VISIBLE){
-                lightFour.setImageResource(images[0]);
-            }
-            if(lightFive.getVisibility() == View.VISIBLE){
-                lightFive.setImageResource(images[0]);
-            }
-            if(lightSix.getVisibility() == View.VISIBLE){
-                lightSix.setImageResource(images[0]);
-            }
-            if(lightSeven.getVisibility() == View.VISIBLE){
-                lightSeven.setImageResource(images[0]);
-            }
-            if(lightEight.getVisibility() == View.VISIBLE){
-                lightEight.setImageResource(images[0]);
-            }
-            if(lightNine.getVisibility() == View.VISIBLE){
-                lightNine.setImageResource(images[0]);
-            }
-            if(lightTen.getVisibility() == View.VISIBLE){
-                lightTen.setImageResource(images[0]);
-            }
-            if(lightEleven.getVisibility() == View.VISIBLE){
-                lightEleven.setImageResource(images[0]);
-            }
-            if(lightTwelve.getVisibility() == View.VISIBLE){
-                lightTwelve.setImageResource(images[0]);
-            }
-            if(lightThirteen.getVisibility() == View.VISIBLE){
-                lightThirteen.setImageResource(images[0]);
-            }
-            if(lightFourteen.getVisibility() == View.VISIBLE){
-                lightFourteen.setImageResource(images[0]);
-            }
-            if(lightFifteen.getVisibility() == View.VISIBLE){
-                lightFifteen.setImageResource(images[0]);
-            }
-            if(lightSixteen.getVisibility() == View.VISIBLE){
-                lightSixteen.setImageResource(images[0]);
-            }
+
         }
     };
 
@@ -317,9 +162,6 @@ public class LightsActivity extends AppCompatActivity {
             exNum = i.getInt("exNum");
             exercise = i.getStringArrayList("exercise");
         }
-        // Toast.makeText(this, exercise.get(1), Toast.LENGTH_SHORT).show();
-
-        boolean oneCheck = true;
 
         //removing the first line of array
         exercise.remove(0);
