@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">Algometer</string>
-    <string name="name">Név:</string>
-    <string name="txt_source">Feladat száma:</string>
-    <string name="lights_title">Jegyezd meg a fényjátékot, majd játszd vissza!</string>
-    <string name="play">Lejátszás</string>
-    <string name="enter_line">Sor bevitele</string>
-    <string name="enter_whole">Teljes bevitel</string>
-    <string name="data_added">Feladat befejezve</string>
-    <string name="not_equal_lines">A sorok száma nem egyezik</string>
+    <string name="name">Name:</string>
+    <string name="txt_source">Exercise number</string>
+    <string name="lights_title">Memorize the play of lights, then play it back.</string>
+    <string name="play">Play</string>
+    <string name="enter_line">Add line</string>
+    <string name="enter_whole">Add whole</string>
+    <string name="data_added">Data added</string>
+    <string name="not_equal_lines">Number of lines is not correct, start again.</string>
 
-    <string name="csv_name">Név</string>
-    <string name="csv_exercise_nr">Feladatszám</string>
-    <string name="csv_nr_of_lights">Fények száma</string>
-    <string name="csv_lines_of_exercise">Feladat sorai</string>
-    <string name="csv_mistakes">Hibák</string>
-    <string name="csv_clicks">Kattintások</string>
-    <string name="csv_full_time">Teljes idő</string>
-    <string name="csv_avg_time">Kattok közötti átlag idő</string>
+    <string name="csv_name">Name</string>
+    <string name="csv_exercise_nr">Exercise Nr</string>
+    <string name="csv_nr_of_lights">Nr of lights</string>
+    <string name="csv_lines_of_exercise">Nr of lines</string>
+    <string name="csv_mistakes">Mistakes</string>
+    <string name="csv_clicks">Clicks</string>
+    <string name="csv_full_time">Full time</string>
+    <string name="csv_avg_time">Average time between clicks</string>
 
     <string-array name="spinner_nums">
 

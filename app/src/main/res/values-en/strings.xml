@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Algometer</string>
+    <string name="csv_avg_time">Average time between clicks</string>
+    <string name="csv_clicks">Clicks</string>
+    <string name="csv_exercise_nr">Exercise Nr</string>
+    <string name="csv_full_time">Full time</string>
+    <string name="csv_lines_of_exercise">Nr of lines</string>
+    <string name="csv_mistakes">Mistakes</string>
+    <string name="csv_name">Name</string>
+    <string name="name">Name:</string>
+    <string name="csv_nr_of_lights">Nr of lights</string>
+    <string name="data_added">Data added</string>
+    <string name="enter_line">Add line</string>
+    <string name="enter_whole">Add whole</string>
+    <string name="lights_title">Memorize the play of lights, then play it back.</string>
+    <string name="not_equal_lines">Number of lines is not correct, start again.</string>
+    <string name="play">Play</string>
+    <string name="txt_source">Exercise number</string>
+</resources>
