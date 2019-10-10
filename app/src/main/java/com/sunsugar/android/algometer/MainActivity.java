@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         //making a String[] of the patterns/exercises
         Log.i("read text", text.toString());
         String exStr = text.toString();
-        String[] exercises = exStr.split("Feladat ");
+        String[] exercises = exStr.split("Ex ");
 
         //for debugging
         // TextView testText = (TextView)findViewById(R.id.test_text);
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
         //making a String[] of the patterns/exercises
         Log.i("read text", text.toString());
         String exStr = text.toString();
-        String[] exercises = exStr.split("Feladat ");
+        String[] exercises = exStr.split("Ex ");
         //array for exercises
         ArrayList<String[]> exerciseList = new ArrayList<>();
 

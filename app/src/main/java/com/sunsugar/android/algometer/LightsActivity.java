@@ -92,7 +92,7 @@ public class LightsActivity extends AppCompatActivity {
     public Light light15;
     public Light light16;
 
-    //data from MainActivitypublic boolean oneclicked;
+    //data from MainActivity;
 
     String name = "";
     int exNum = 0;
