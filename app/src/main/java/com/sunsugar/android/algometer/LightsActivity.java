@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -328,9 +327,7 @@ public class LightsActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                         getResources().getString(R.string.not_equal_lines),
                         Toast.LENGTH_SHORT).show();
-                if (exercise.size() < solution.size()){
                     solution.clear();
-                }
                 playOfLights(exercise);
                 return;
             }
